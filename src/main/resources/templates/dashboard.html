@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+  font-family:sans-serif; 
+  background: -webkit-linear-gradient(to right, #155799, #159957); 
+  background: linear-gradient(to right, #155799, #159957); 
+  color:whitesmoke;
+}
+
+th,h1{
+    color: hsl(263, 80%, 4%);
+
+}
+h1{
+
+}
+    </style>
+
    
 </head>
 <body>
     <h2 style="color:green" th:text="${pos}"></h2>
     <h3 style="color:red" th:text="${neg}"></h3>
     <center>
-       <h1>Dashboard</h1>
+       <h1>Dashboard Details</h1>
         <table border="2px" cellpadding="20" cellspacing="20">
             <tr>
                 <th>Long URL</th>

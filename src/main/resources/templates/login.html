@@ -5,15 +5,23 @@
 	<meta charset="UTF-8">
 	<title>Login</title>
 	<style>
-		body {
+		/* body {
 			font-family: Arial, sans-serif;
 			background-color: #f0f0f0;
 			text-align: center;
-		}
+		} */
+
+		body {
+  font-family:sans-serif; 
+  background: -webkit-linear-gradient(to right, #155799, #159957); 
+  background: linear-gradient(to right, #155799, #159957); 
+  color:whitesmoke;
+}
 
 		h1 {
-			color: #0073e6;
+			color: #04101c;
 			margin-top: 50px;
+			text-align: center;
 		}
 		
 		h2{
@@ -27,13 +35,14 @@
 		}
 
 		#mainc {
-			background-color: #fff;
+			/* background-color: #fff; */
 			width: 300px;
 			margin: 0 auto;
 			padding: 20px;
 			border-radius: 5px;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		}
+
 
 		label {
 			display: block;
@@ -50,7 +59,7 @@
 			border-radius: 5px;
 		}
 
-		button {
+		/* button {
 			background-color: #0073e6;
 			color: #fff;
 			border: none;
@@ -61,16 +70,43 @@
 			cursor: pointer;
 			transition: background-color 0.3s;
 			margin-bottom: 20px;
-		}
+		} */
+		button {
+    background-color: #030804;
+    color: white;
+	border:none;
+    padding: 14px 20px;
+	margin-top:10px;
+	border-radius: 5px ;
+	margin-left: 20px ;
+	cursor:pointer;
+	transition: background-color 0.3s;
+	margin-bottom:20px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+  }
+  form{
+    width:35rem;
+    margin: auto;
+    color:whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
 
 		button[type="reset"] {
 			background-color: #ccc;
 			margin-bottom: 20px;
 		}
 
-		button:hover {
-			background-color: #005bb7;
-		}
+		 button:hover {
+			background-color: #005bb7; 
+			background-color: #030804;
+  }
+		
 
 		h4 {
 			margin-top: 10px;
@@ -78,11 +114,12 @@
 
 		a {
 			text-decoration: none;
-			color: #0073e6;
+			color: hsl(236, 78%, 53%);
 		}
 
 		h5 {
 			margin-top: 10px;
+			color: hsl(263, 80%, 4%);
 		}
 	</style>
 </head>
@@ -91,7 +128,7 @@
 	<h2 style="color: green;" th:text="${pos}"></h2>
 	<h3 style="color: red;" th:text="${neg}"></h3>
 	<h1>
-		Login Here
+		User Login Here
 	</h1>
 	<div id="mainc">
 		<form action="login" method="post">
@@ -100,12 +137,14 @@
 					<td><label for="email">Email:</label></td>
 					<td><input type="email" name="email" id="email" placeholder="Enter your email" required></td>
 				</tr>
+				<br><br>
 				<tr>
 					<td><label for="pass">Password:</label></td>
 					<td><input type="password" name="password" id="pass" placeholder="Enter password" required></td>
 				</tr>
+				<br><br>
 				<tr>
-					<td><button>Login</button></td>
+					<td><button type="">Login</button></td>
 					<td><button type="reset">Cancel</button></td>
 				</tr>
 			</table>

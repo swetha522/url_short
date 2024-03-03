@@ -7,11 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <style>
-        body {
+        /* body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             text-align: center;
-        }
+        } */
+        body 
+{
+  font-family:sans-serif; 
+  background: -webkit-linear-gradient(to right, #155799, #159957); 
+  background: linear-gradient(to right, #155799, #159957); 
+  color:whitesmoke;
+}
 
         h1 {
             color: #0073e6;
@@ -28,14 +35,24 @@
             font-size: 25px;
         }
 
-        form {
+        /* form {
             background-color: #fff;
             width: 500px;
             margin: 0 auto;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+        } */
+        form{
+    width:35rem;
+    margin: auto;
+    color:whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
 
         legend {
             font-weight: bold;
@@ -69,7 +86,7 @@
         }
 
         button {
-            background-color: #0073e6;
+            background-color: #02090f;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -84,7 +101,7 @@
         }
 
         button:hover {
-            background-color: #005bb7;
+            background-color: #109669;
         }
 
         a {
@@ -94,6 +111,10 @@
 
         a button {
             background-color: #ccc;
+        }
+        h1{
+            text-align: center;
+
         }
     </style>
 </head>
@@ -105,22 +126,22 @@
             <legend>Enter Details Here</legend>
             <table>
                 <tr>
-                    <th>FullName:</th>
-                    <td><input type="text" name="fullname"></td>
+                    <th>Name:</th>
+                    <td><input type="text" name="fullname" placeholder="Enter Your Name"></td>
                 </tr>
 
                 <tr>
                     <th>Mobile:</th>
-                    <td><input type="tel" pattern="[0-9]{10}" name="mobile" required></td>
+                    <td><input type="tel" pattern="[0-9]{10}" name="mobile" placeholder="Enter Your Mobile" required></td>
                 </tr>
                 <tr>
                     <th>Email:</th>
-                    <td><input type="email" name="email"></td>
+                    <td><input type="email" name="email" placeholder="Enter Your Email"></td>
                     <td><h2 style="color: red;" th:text="${neg}"></h2></td>
                 </tr>
                 <tr>
                     <th>Password:</th>
-                    <td><input type="password" name="password" required></td>
+                    <td><input type="password" name="password" placeholder="Enter Your Password" required></td>
                 </tr>
             </table>
             <button>Signup</button>
