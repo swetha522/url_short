@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 3px black solid;
+        }
+        h1{
+            color: #0073e6;
+			margin-top: 50px;
+        }
+        button {
+			background-color: #0073e6;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			margin-top: 10px;
+			border-radius: 5px;
+			margin-left: 20px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			margin-bottom: 20px;
+		}
+    </style>
+   
+</head>
+<body>
+    <h2 style="color:green" th:text="${pos}"></h2>
+    <h3 style="color:red" th:text="${neg}"></h3>
+    <center>
+       <h1>Dashboard</h1>
+        <table cellpadding="20" cellspacing="20">
+            <tr>
+                <th>Long URL</th>
+                <th>Short Url</th>
+                <th>Count</th>
+            </tr>
+         <th:block th:if="list">
+            <tr th:each="x:${list}">
+                <td><a th:href="${x.longUrl}" target="_blank"><span th:text="${x.longUrl}"></span></a></td>
+                <td><a th:href="${x.shortUrl}" target="_blank" onclick="testing()" ><span th:text="${x.shortUrl}"></span></a></td>
+                <td th:text="${x.urlCount}"></td>
+            </tr>
+        </th:block>
+
+        </table>
+        <br>
+        <br>
+
+        <a href="/add-url"><button>Enter Long URL</button></a> 
+        <a href="/logout"><button>Logout </button></a>
+</center>
+
+<script>
+            function testing(){
+               setTimeout(()=>{
+                    window.location.reload()
+               },1000)
+            }
+</script>
+    
+</body>
+</html>
